@@ -10,6 +10,8 @@ namespace Test1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Test_Hit1");
+            Console.ReadKey();
         }
     }
 }
