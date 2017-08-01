@@ -10,7 +10,17 @@ namespace Test1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test_Git1");
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Report rep = new Report();
+            rep.PrintHead();
+
+
+            //Console.OutputEncoding = Encoding.UTF8;
+            //Menu menuObj = new Menu();
+            //menuObj.MainMenu();
+            //menuObj.ExitProject();
+
             Console.ReadKey();
         }
     }
