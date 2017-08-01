@@ -13,7 +13,8 @@ namespace Test1
             Console.OutputEncoding = Encoding.UTF8;
 
             Report rep = new Report();
-            rep.PrintHead();
+
+            rep.PrintReport();
 
 
             //Console.OutputEncoding = Encoding.UTF8;

@@ -8,8 +8,6 @@ namespace Test1
 {
     class Report
     {
-        //public string[] headNames = new string[] { "ID", "Прізвище", "Ім’я", "По батькові", "Дата народження", "Посада", "Підрозділ (відділ)", "Номер кімнати", "Службовий телефон", "Місячний оклад", "Дата прийняття на роботу", "Поле для приміток" };
-
         public int[] maxColumnLengs = new int[] { 4, 12, 10, 12, 10, 12, 12, 7, 9, 8, 10, 8 };
         public string[] headNames = new string[] { "ID", "Прізвище", "Ім’я", "По\nбатькові", "Дата\nнародження", "Посада", "Підрозділ\n(відділ)", "Номер\nкімнати", "Службовий\nтелефон", "Місячний\nоклад", "Дата\nприйняття\nна роботу", "Поле\nдля\nприміток" };
         
@@ -74,15 +72,26 @@ namespace Test1
         public void PrintHead()
         {
             int allLength = GetAllLengthOfReport();
-            Console.Write(new string('-', allLength));
+            Console.Write(new string('=', allLength));
             PrintString(headNames, false);
-            Console.Write("\n"+new string('-', allLength));
+            Console.Write("\n"+new string('=', allLength));
         }
 
-        //public void ViewReport(object mas)
-        //{
-        //    PrintHead();
-        //}
+        public void PrintReport()
+        {
+            int allLength = GetAllLengthOfReport();
+
+            PrintHead();
+            string[] st1 = new string[] { "1", "Синицький", "Євгеній", "Валерійович", "16.02.1984", "Інженер-програміст", "ІТ-відділ", "6", "106", "2000", "01.01.15", "С#" };
+            PrintString(st1, false);
+            Console.Write("\n" + new string('-', allLength));
+            string[] st2 = new string[] { "2", "Бальницький", "Василь", "Миколайович", "01.01.1984", "Системний адміністратор", "ІТ-відділ", "6", "106", "-", "01.01.17", "техніка" };
+            PrintString(st2, false);
+            Console.Write("\n" + new string('-', allLength));
+
+
+
+        }
 
 
 
